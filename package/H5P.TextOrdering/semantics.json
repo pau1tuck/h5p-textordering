@@ -28,14 +28,14 @@
     "name": "listItems",
     "type": "list",
     "label": "Text items",
-    "description": "Enter the individual text items in the correct order.",
+    "description": "Enter the individual words or phrases in the correct order.",
     "min": 3,
     "defaultNum": 3,
     "optional": false,
     "field": {
       "name": "item",
       "type": "text",
-      "label": "Text:",
+      "label": "Item",
       "importance": "high"
     }
   }
