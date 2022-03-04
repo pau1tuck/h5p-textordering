@@ -11,18 +11,7 @@ export default class TextOrdering extends H5P.EventDispatcher {
    */
   constructor(private params: any, private id: string, private extras = {}) {
     super();
-    this.element = document.createElement("div");
-    this.element.innerText = params.question;
-    this.element.append("Arnooser");
-
-    // Create render root
     this.root = document.createElement("div");
-
-    this.reactDom = (
-      <div>
-        <p>Dogshaver</p>
-      </div>
-    );
 
     /**
      * Attach library to wrapper.
@@ -32,9 +21,7 @@ export default class TextOrdering extends H5P.EventDispatcher {
     this.attach = (wrapper: JQuery) => {
       wrapper.get(0)?.appendChild(this.root);
 
-      // We render an initial state of the content type here. It will be updated
-      // later when the data from the server has arrived.
-      ReactDOM.render(<div>Hello, {this.params.question}.</div>, this.root);
+      ReactDOM.render(<div>Hello, {this.params.listItems}.</div>, this.root);
       this.triggerResize();
     };
   }
