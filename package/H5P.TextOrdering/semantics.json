@@ -3,13 +3,13 @@
     "name": "taskDescription",
     "label": "Task description",
     "description": "Describe how the user should solve the task.",
-    "default": "Drag the words into the correct boxes",
+    "default": "Drag the words into the correct order.",
     "importance": "high",
     "type": "text"
   },
   {
     "name": "inputType",
-    "label": "Ordering type",
+    "label": "Ordering style",
     "importance": "high",
     "type": "select",
     "options": [
@@ -26,99 +26,17 @@
   },
   {
     "name": "listItems",
-    "label": "Items for reordering",
     "type": "list",
-    "importance": "high",
-    "entity": "Items",
-    "min": 3
-  },
-  {
-    "name": "dialogs",
-    "type": "list",
-    "importance": "high",
-    "widgets": [
-      {
-        "name": "VerticalTabs",
-        "label": "Default"
-      }
-    ],
-    "label": "Dialogs",
-    "entity": "dialog",
-    "min": 1,
-    "defaultNum": 1,
+    "label": "Text items",
+    "description": "Enter the individual text items in the correct order.",
+    "min": 3,
+    "defaultNum": 3,
+    "optional": false,
     "field": {
-      "name": "question",
-      "type": "group",
-      "label": "Question",
-      "importance": "high",
-      "fields": [
-        {
-          "name": "text",
-          "type": "text",
-          "widget": "html",
-          "tags": ["p", "br", "strong", "em", "code"],
-          "label": "Text",
-          "importance": "high",
-          "description": "Hint for the first part of the dialogue",
-          "default": "<p style=\"text-align: center;\"></p>"
-        },
-        {
-          "name": "answer",
-          "type": "text",
-          "widget": "html",
-          "tags": ["p", "br", "strong", "em", "code"],
-          "label": "Answer",
-          "importance": "high",
-          "description": "Hint for the second part of the dialogue",
-          "default": "<p style=\"text-align: center;\"></p>"
-        },
-        {
-          "name": "image",
-          "type": "image",
-          "label": "Image",
-          "importance": "high",
-          "optional": true,
-          "description": "Optional image for the card. (The card may use just an image, just a text or both)"
-        },
-        {
-          "name": "imageAltText",
-          "type": "text",
-          "label": "Alternative text for the image",
-          "importance": "high",
-          "optional": true
-        },
-        {
-          "name": "audio",
-          "type": "audio",
-          "label": "Audio files",
-          "importance": "low",
-          "optional": true
-        },
-        {
-          "name": "tips",
-          "type": "group",
-          "label": "Tips",
-          "importance": "low",
-          "fields": [
-            {
-              "name": "front",
-              "type": "text",
-              "label": "Tip for text",
-              "importance": "low",
-              "optional": true,
-              "description": "Tip for the first part of the dialogue"
-            },
-            {
-              "name": "back",
-              "type": "text",
-              "label": "Tip for answer",
-              "importance": "low",
-              "optional": true,
-              "description": "Tip for the second part of the dialogue"
-            }
-          ]
-        }
-      ]
+      "name": "item",
+      "type": "text",
+      "label": "Text:",
+      "importance": "high"
     }
   }
 ]

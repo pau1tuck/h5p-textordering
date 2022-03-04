@@ -11,18 +11,7 @@ export default class TextOrdering extends H5P.EventDispatcher {
    */
   constructor(private params: any, private id: string, private extras = {}) {
     super();
-    this.params.extend({
-      dialogs: [
-        {
-          text: "Horse",
-          answer: "Hest",
-        },
-        {
-          text: "Cow",
-          answer: "Ku",
-        },
-      ],
-    });
+    this.params.$extend({});
     this.root = document.createElement("div");
 
     /**
@@ -34,7 +23,6 @@ export default class TextOrdering extends H5P.EventDispatcher {
       wrapper.get(0)?.appendChild(this.root);
 
       ReactDOM.render(<div>Hello, {this.params.listItems}.</div>, this.root);
-      this.triggerResize();
     };
   }
 }

@@ -30,11 +30,5 @@
       "minorVersion": 3
     }
   ],
-  "editorDependencies": [
-    {
-      "machineName": "H5PEditor.VerticalTabs",
-      "majorVersion": 1,
-      "minorVersion": 3
-    }
-  ]
+  "editorDependencies": []
 }
