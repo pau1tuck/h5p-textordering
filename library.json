@@ -1,0 +1,21 @@
+{
+  "title": "Text Ordering",
+  "description": "A question-type that requires the vertical or horizontal sequencing of text.",
+  "machineName": "H5P.TextOrdering",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 1,
+  "runnable": 1,
+  "author": "Paul Tuck @pau1tuck",
+  "license": "MIT",
+  "embedTypes": ["div"],
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 0
+  },
+  "preloadedJs": [
+    {
+      "path": "dist/h5p-textordering.js"
+    }
+  ]
+}
