@@ -1,0 +1,33 @@
+[
+  {
+    "name": "question",
+    "label": "Question",
+    "importance": "high",
+    "type": "text"
+  },
+  {
+    "name": "inputType",
+    "label": "Ordering type",
+    "importance": "high",
+    "type": "select",
+    "options": [
+      {
+        "label": "Vertical",
+        "value": "vertical"
+      },
+      {
+        "label": "Horizontal",
+        "value": "horizontal"
+      }
+    ],
+    "default": "vertical"
+  },
+  {
+    "name": "items",
+    "label": "Items for reordering",
+    "type": "list",
+    "importance": "high",
+    "entity": "Items",
+    "min": 3
+  }
+]

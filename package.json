@@ -6,17 +6,14 @@
     "type": "git",
     "url": "git+https://github.com/pau1tuck/h5p-textordering"
   },
-  "keywords": [
-    "h5p",
-    "library"
-  ],
+  "keywords": ["h5p", "library"],
   "author": "Paul Tuck @pau1tuck",
   "license": "MIT",
   "main": "dist/h5p-textordering.js",
   "scripts": {
     "dev": "webpack NODE_ENV='development' webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cross-env NODE_ENV='production' webpack --mode=production && cp library.json ./package/H5P.TextOrdering/ && cp semantics.json ./package/H5P.TextOrdering/ && cp ./dist/* ./package/H5P.TextOrdering/dist/ && rm ./package/TextOrdering.h5p && cd package && zip -r -D -X TextOrdering.h5p *"
+    "build": "webpack --mode=production && cp library.json ./package/H5P.TextOrdering/ && cp semantics.json ./package/H5P.TextOrdering/ && cp ./dist/* ./package/H5P.TextOrdering/dist/ && rm ./package/TextOrdering.h5p && cd package && zip -r -D -X TextOrdering.h5p *"
   },
   "dependencies": {
     "-": "^0.0.1",
