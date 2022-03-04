@@ -11,6 +11,18 @@ export default class TextOrdering extends H5P.EventDispatcher {
    */
   constructor(private params: any, private id: string, private extras = {}) {
     super();
+    this.params.extend({
+      dialogs: [
+        {
+          text: "Horse",
+          answer: "Hest",
+        },
+        {
+          text: "Cow",
+          answer: "Ku",
+        },
+      ],
+    });
     this.root = document.createElement("div");
 
     /**

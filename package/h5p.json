@@ -10,14 +10,31 @@
       "role": "Author"
     }
   ],
+  "mainLibrary": "H5P.TextOrdering",
+  "machineName": "H5P.TextOrdering",
+  "embedTypes": ["div"],
   "preloadedDependencies": [
     {
       "machineName": "H5P.TextOrdering",
       "majorVersion": 1,
       "minorVersion": 0
+    },
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": 4,
+      "minorVersion": 5
+    },
+    {
+      "machineName": "H5P.JoubelUI",
+      "majorVersion": 1,
+      "minorVersion": 3
     }
   ],
-  "mainLibrary": "H5P.TextOrdering",
-  "machineName": "H5P.TextOrdering",
-  "embedTypes": ["div"]
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.VerticalTabs",
+      "majorVersion": 1,
+      "minorVersion": 3
+    }
+  ]
 }
