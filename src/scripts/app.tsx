@@ -22,15 +22,15 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
     console.log(this.newList);
 
     /**
-     * Attach library to wrapper.
+     * Attach library to wrapper
      *
-     * @param {jQuery} $wrapper Content's container.
+     * @param {jQuery} $wrapper Content's container
      */
     this.attach = (wrapper: JQuery) => {
       wrapper.get(0)?.appendChild(this.root);
 
       ReactDOM.render(
-        <div>Hello, {this.params.taskDescription}.</div>,
+        <div>Hello, {this.params.taskDescription}</div>,
         this.root,
       );
     };
