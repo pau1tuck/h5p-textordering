@@ -11,7 +11,6 @@
   "license": "MIT",
   "main": "dist/h5p-textordering.js",
   "scripts": {
-    "dev": "webpack NODE_ENV='development' webpack --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production && cp library.json ./package/H5P.TextOrdering/ && cp semantics.json ./package/H5P.TextOrdering/ && cp ./dist/* ./package/H5P.TextOrdering/dist/ && rm ./package/TextOrdering.h5p && cd package && zip -r -D -X TextOrdering.h5p *"
   },

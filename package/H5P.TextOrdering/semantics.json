@@ -1,6 +1,6 @@
 [
   {
-    "name": "question",
+    "name": "textField",
     "label": "Question",
     "importance": "high",
     "type": "text"
