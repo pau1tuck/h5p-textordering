@@ -1,5 +1,11 @@
 import React from "react";
 
-export function Container() {
-  return <div>Anus</div>;
+export function Container({ listItems }: any) {
+  return (
+    <div>
+      {listItems.map((x: any, y: number) => {
+        return x.text;
+      })}
+    </div>
+  );
 }
