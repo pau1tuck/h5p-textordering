@@ -37,7 +37,15 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
     this.attach = (wrapper: JQuery) => {
       wrapper.get(0)?.appendChild(this.root);
 
-      ReactDOM.render(<div>Hello, Mother.</div>, this.root);
+      ReactDOM.render(
+        <div>
+          Hello,{" "}
+          {this.newList.map((x: any, key: number) => {
+            return x.item;
+          })}
+        </div>,
+        this.root,
+      );
     };
   }
 
