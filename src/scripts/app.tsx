@@ -8,16 +8,15 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
   /**
    * @constructor
    *
-   * @param {object} params Parameters passed by the editor.
-   * @param {number} contentId Content's id.
-   * @param {object} [extras] Saved state, metadata, etc.
+   * @param {object} params passed from the H5P editor
+   * @param {string} contentId number
+   * @param {object} [extras] Saved state, metadata, etc
    */
   constructor(private params: any, private id: string, private extras = {}) {
     super();
     // this.params.$extend({});
     this.root = document.createElement("div");
 
-    console.log(params.listItems);
     this.newList = this.shuffleItems(params.listItems);
     console.log(this.newList);
 
@@ -30,7 +29,12 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
       wrapper.get(0)?.appendChild(this.root);
 
       ReactDOM.render(
-        <div>Hello, {this.params.taskDescription}</div>,
+        <div>
+          Hello,
+          {this.newList.map((x: string, y: number) => {
+            return x;
+          })}
+        </div>,
         this.root,
       );
     };
