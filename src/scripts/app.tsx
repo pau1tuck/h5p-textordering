@@ -37,7 +37,10 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
       wrapper.get(0)?.classList.add("text-ordering");
       wrapper.get(0)?.appendChild(this.root);
 
-      ReactDOM.render(<Container listItems={this.shuffledList} />, this.root);
+      ReactDOM.render(
+        <Container params={this.params} shuffledList={this.shuffledList} />,
+        this.root,
+      );
     };
   }
 

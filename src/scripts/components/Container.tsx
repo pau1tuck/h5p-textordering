@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Container({ listItems }: any) {
+export function Container({ params, shuffledList }: any) {
   return (
     <div>
       {listItems.map((x: any, y: number) => {
