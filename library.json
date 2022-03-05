@@ -13,6 +13,11 @@
     "majorVersion": 1,
     "minorVersion": 0
   },
+  "preloadedCss": [
+    {
+      "path": "dist/h5p-textordering.css"
+    }
+  ],
   "preloadedJs": [
     {
       "path": "dist/h5p-textordering.js"
