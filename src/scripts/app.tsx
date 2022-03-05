@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import React from "react";
 import ReactDOM from "react-dom";
+import { Container } from "./components/Container";
 
 export default class TextOrdering extends (H5P.EventDispatcher as {
   new (): any;
@@ -35,15 +36,7 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
     this.attach = (wrapper: JQuery) => {
       wrapper.get(0)?.appendChild(this.root);
 
-      ReactDOM.render(
-        <div>
-          <p>Hello,{this.params.question}</p>
-          {this.newList.map((x: any, key: number) => {
-            return x.item;
-          })}
-        </div>,
-        this.root,
-      );
+      ReactDOM.render(<Container />, this.root);
     };
   }
 

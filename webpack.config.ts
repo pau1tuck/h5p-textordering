@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import path from "path";
 import { Configuration } from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import OptimizeCSSAssetsPlugin from "optimize-css-assets-webpack-plugin";
 
 const config: Configuration = {
   entry: "./src/entries/main.ts",
@@ -20,6 +22,15 @@ const config: Configuration = {
           },
         },
       },
+      {
+        /*
+        test: /\.scss$/,
+        include: path.resolve(__dirname, "src/scss"),
+        use: ["style-loader", "css-loader", "sass-loader"], */
+        test: /\.css$/,
+        include: path.resolve(__dirname, "src/css"),
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
   },
   resolve: {
@@ -29,6 +40,14 @@ const config: Configuration = {
     path: path.resolve(__dirname, "dist"),
     filename: "h5p-textordering.js",
   },
+  optimization: {
+    minimizer: [new OptimizeCSSAssetsPlugin({})],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "h5p-textordering.css",
+    }),
+  ],
 };
 
 export default config;
