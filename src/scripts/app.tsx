@@ -19,12 +19,10 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
 
     this.listItems = params.listItems.map((x: string, y: number) => {
       return {
-        position: y,
         item: x,
+        position: y,
       };
     });
-
-    console.log(this.listItems);
 
     this.newList = this.shuffleItems(this.listItems);
     console.log(this.newList);
@@ -39,7 +37,7 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
 
       ReactDOM.render(
         <div>
-          Hello,{" "}
+          <p>Hello,{this.params.question}</p>
           {this.newList.map((x: any, key: number) => {
             return x.item;
           })}
