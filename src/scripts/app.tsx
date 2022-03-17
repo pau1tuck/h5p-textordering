@@ -19,7 +19,7 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
 
     this.contentId = id;
 
-    this.root = document.createElement("div");
+    this.main = document.createElement("div");
 
     this.listItems = params.listItems.map((x: string, y: number) => {
       return {
@@ -46,10 +46,10 @@ export default class TextOrdering extends (H5P.EventDispatcher as {
      */
     this.attach = (wrapper: JQuery) => {
       wrapper.get(0)?.classList.add("h5p-text-ordering");
-      // wrapper.get(0)?.appendChild(this.root);
+      // wrapper.get(0)?.appendChild(this.main);
       wrapper.get(0)?.appendChild(element);
 
-      // ReactDOM.render(<div>DOM</div>, this.root);
+      // ReactDOM.render(<div>DOM</div>, this.main);
     };
   }
 
